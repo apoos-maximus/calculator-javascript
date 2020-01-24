@@ -19,3 +19,5 @@ for (var x in operators){
     document.body.appendChild(operatorButtonControl(specifics));
 };
 
+document.body.appendChild(displayControl());
+
