@@ -1,4 +1,4 @@
-function calculatorView (model,domButtons,Screen) {
+function calculatorView (model,domButtons,screen) {
     
     var outerDiv = document.createElement("div");
     outerDiv.id = "outerDiv";
@@ -11,8 +11,9 @@ function calculatorView (model,domButtons,Screen) {
     buttonDiv.id = "buttonDiv";
     outerDiv.appendChild(buttonDiv);
 
-    var gridDiv = document.createElement("div");
+    var gridDiv = document.createElement("div");        // lay outing using containers
     gridDiv.class = "grid-container";
+    // gridDiv.style.
     gridDiv.style.display = "grid";
     gridDiv.style.gridTemplateColumns = "repeat(4, 1fr)";
     gridDiv.style.gridGap = "10px"; 

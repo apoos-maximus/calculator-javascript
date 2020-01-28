@@ -9,7 +9,8 @@ function calculatorController () {
         "7" : "numberButton", "8" : "numberButton", "9" : "numberButton", "-" : "operatorButton",
         "." : "operatorButton", "0" : "numberButton", "=" : "operatorButton", "+" : "operatorButton"
     };
-    domButtons = [];
+    var domButtons = [];
+    var screen = displayControl();
 
     for ( button in buttons ) {
         var cell = document.createElement("div");
@@ -31,7 +32,7 @@ function calculatorController () {
     }
 
 
-    var calculatorElement = calculatorView(calc,domButtons,screen);
+    var calculatorElement = calculatorView(calc, domButtons, screen);
     return calculatorElement;
 };
 
