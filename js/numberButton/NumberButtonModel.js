@@ -1,3 +1,4 @@
+// number button class - inherits button class
 function numberButton() {
     var _type;
     

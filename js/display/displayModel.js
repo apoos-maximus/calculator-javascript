@@ -1,3 +1,4 @@
+// display class
 function display () {
     _expression = "--balnk--";
 

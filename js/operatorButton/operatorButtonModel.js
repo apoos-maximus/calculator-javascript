@@ -1,3 +1,4 @@
+// operator button class 
 function operatorButton() {
     var _type;
     

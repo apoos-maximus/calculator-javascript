@@ -1,3 +1,4 @@
+// button class
 function button(){
     var _label = "unknown";
     
