@@ -1,5 +1,5 @@
 // button class
-function button(){
+function buttonModel(){
     var _label = "unknown";
     
     Object.defineProperties(this, {

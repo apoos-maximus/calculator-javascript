@@ -13,5 +13,5 @@ function operatorButton() {
         }
     });
 };
-operatorButton.prototype = new button();
+operatorButton.prototype = new buttonModel();
 operatorButton.prototype.constructor = operatorButton;

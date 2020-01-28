@@ -1,7 +1,5 @@
-function calculatorView (model) {
-    var buttons = {
-        
-    }
+function calculatorView (model,domButtons,Screen) {
+    
     var outerDiv = document.createElement("div");
     outerDiv.id = "outerDiv";
     
@@ -19,12 +17,11 @@ function calculatorView (model) {
     gridDiv.style.gridTemplateColumns = "repeat(4, 1fr)";
     gridDiv.style.gridGap = "10px"; 
 
-    for ( i = 0; i < 16; i++ ){
-        var cell = document.createElement("div");
-        cell.class = "grid-item";
-        cell.innerHTML = i;
-        gridDiv.appendChild(cell);
+    for ( domButton in domButtons ) {
+        // gridDiv.appendChild(domButton[1]);
+        gridDiv.appendChild (domButtons[domButton] ) ;
     }
+    
     buttonDiv.appendChild(gridDiv);
     return outerDiv;
     

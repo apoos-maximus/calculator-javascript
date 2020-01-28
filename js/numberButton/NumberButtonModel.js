@@ -13,5 +13,5 @@ function numberButton() {
         }
     });
 };
-numberButton.prototype = new button();
+numberButton.prototype = new buttonModel();
 numberButton.prototype.constructor = numberButton;
