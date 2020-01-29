@@ -1,17 +1,7 @@
-// operator button class 
-function operatorButton() {
-    var _type;
-    
-    Object.defineProperties(this,{
-        "Type" : {
-            get : function () {
-                return _type;
-            },
-            set : function (value) {
-                _type = value;
-            }
-        }
-    });
+// operator button class
+var OperatorButtonModel = function (id, value, options) {
+    this.type = "operator";
+    ButtonModel.call(this, id, value, options);
 };
-operatorButton.prototype = new buttonModel();
-operatorButton.prototype.constructor = operatorButton;
+OperatorButtonModel.prototype = new ButtonModel();
+OperatorButtonModel.prototype.constructor = OperatorButtonModel;

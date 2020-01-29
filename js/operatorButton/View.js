@@ -1,12 +1,16 @@
 //builds operator button dom element
-function operatorButtonView (model) {
-    var domOperatorButon = document.createElement("button");
-    domOperatorButon.innerHTML = model.Label;
-    domOperatorButon.style.backgroundColor = "#FFC300";
-    domOperatorButon.style.color = "#FFFFFF";
-    domOperatorButon.style.fontFamily = "monospace";
-    domOperatorButon.style.border = " solid #581845";
-    domOperatorButon.style.width = "60px";
-    domOperatorButon.style.height = "30px";
-    return domOperatorButon;
+ var OperatorButtonView = function (model) {
+    var operatorButtonElement;
+
+    var init = function () {
+        createButtonElement();
+    }
+    var createButtonElement = function (model) {
+        operatorButtonElement = document.createElement("button");
+        operatorButtonElement.id = model.id;
+        operatorButtonElement.innerHTML = model.value;
+        operatorButtonElement.className = model.options.buttonClass;
+    }
+    init();
+    return this;
 };
