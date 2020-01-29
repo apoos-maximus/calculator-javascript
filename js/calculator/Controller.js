@@ -9,9 +9,9 @@ function CalculatorController (heading,options) {
         calculatorView = new CalculatorView (calculatorModel);
     }
 
-//    var generateButtons = function () {
-//
-//    }
+    var generateButtons = function () {
+
+    }
 
     var generateScreen = function () {
         var sc = new DisplayControl();

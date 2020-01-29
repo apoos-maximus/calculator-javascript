@@ -2,7 +2,9 @@ var CalculatorModel = function (heading, options) {
 
     this.heading = heading;
     this.options = {
-        containerClass : "w3-container"
+        containerClass : "w3-container",
+        row1Class : "w3-cell-row",
+        cellClass : "w3-cell"
     }
     this.numberButtons = ['1','2','3','4','5','6','7','8','9','0'];
     this.operatorButtons = ['+','-','X','/', '=', '.'];

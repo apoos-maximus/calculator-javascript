@@ -16,6 +16,15 @@ function CalculatorView (model) {
     }
 
     var insertButtonDiv = function () {
+        var buttonDiv = document.createElement("div");
+        buttonDiv.id = "buttonDiv";
+        buttonDiv.className = model.options.containerClass;
+        calculatorViewElement.appendChild(buttonDiv);
+
+        var row1 = document.createElement("div");
+        row1.id = "Row 1";
+        row1.className = model.options.row1Class;
+        buttonDiv.appendChild(row1);
 
     }
 

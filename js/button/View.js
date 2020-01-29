@@ -6,9 +6,9 @@ var ButtonView = function (model) {
     }
     createButtonElement = function() {
         buttonViewElement = document.createElement("button");
+        buttonViewElement.className = model.options.buttonClass;
+        buttonViewElement.id = model.id;
         buttonViewElement.innerHTML = model.value;
-        buttonViewElement.style.width = model.options.width;
-        buttonViewElement.style.height = model.options.height;
     }
     init();
     return buttonViewElement;
