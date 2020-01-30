@@ -3,17 +3,18 @@ var OperatorButtonControl = function (id, value, options) {
   var operatorButtonModel;
   var operatorButtonView;
 
-  var init = function () {
+  var init = function (id, value, options) {
     operatorButtonModel = new OperatorButtonModel(id, value, options);
+    console.log
     var but = new OperatorButtonView(operatorButtonModel);
-    operatorButtonView = but.getOperatorButtonView();
+    operatorButtonView = but.getOperatorButtonElement();
   }
 
   this.getOperatorButtonView = function () {
     return operatorButtonView;
   }
 
-  init();
+  init(id, value, options);
   return this;
 
 };

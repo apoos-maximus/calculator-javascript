@@ -1,5 +1,5 @@
 //builds numberButton dom element
-function NumberButtonView(model) {
+ var NumberButtonView=function(model) {
   var numberButtonElement;
 
   var init = function () {
@@ -14,8 +14,10 @@ function NumberButtonView(model) {
     numberButtonElement.innerHTML = model.value;
 
   }
+
   this.getNumberButtonElement = function (){
-    return numberButtonElement;
+  console.log(numberButtonElement);
+   return numberButtonElement;
   }
   init();
   return this;
