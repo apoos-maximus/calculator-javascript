@@ -21,7 +21,7 @@ function CalculatorController (heading,options) {
         console.log(calculatorModel.numberButtons);
         for ( button in calculatorModel.numberButtons ) {
             var but1 = new NumberButtonControl(calculatorModel.numberButtons[button], calculatorModel.numberButtons[button], options);
-            calculatorModel.domButtons[calculatorModel.numberButtons[button]] =  but1.getNumberButtonElement() ;
+            calculatorModel.domButtons[calculatorModel.numberButtons[button]] =  but1.getButtonElement() ;
         }
     }
 
@@ -29,7 +29,7 @@ function CalculatorController (heading,options) {
         var options = { };
         for ( button in calculatorModel.operatorButtons ) {
            var but1 = new OperatorButtonControl(calculatorModel.operatorButtons[button], calculatorModel.operatorButtons[button], options);
-           calculatorModel.domButtons[calculatorModel.operatorButtons[button]] = but1.getOperatorButtonView();
+           calculatorModel.domButtons[calculatorModel.operatorButtons[button]] = but1.getButtonElement();
         }
     }
 

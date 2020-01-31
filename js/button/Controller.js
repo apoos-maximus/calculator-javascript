@@ -11,7 +11,7 @@ var ButtonController = function (id, value, options){
     }
 
     this.onClickHandler = function(event, id, value) {
-
+        console.log(id + " is pressed");
     }
 
     this.getButtonElement = function() {
