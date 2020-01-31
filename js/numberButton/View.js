@@ -16,7 +16,7 @@
   }
 
   this.getNumberButtonElement = function (){
-  console.log(numberButtonElement);
+//  console.log(numberButtonElement);
    return numberButtonElement;
   }
   init();

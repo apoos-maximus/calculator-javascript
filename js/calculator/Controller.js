@@ -7,7 +7,8 @@ function CalculatorController (heading,options) {
         generateButtons();
 //        console.log(calculatorModel.domNumberButtons);
         generateScreen();
-        calculatorView = new CalculatorView (calculatorModel);
+        var cv =  new CalculatorView (calculatorModel);
+         calculatorView = cv.getCalculatorView();
     }
 
     var generateButtons = function () {
@@ -17,32 +18,37 @@ function CalculatorController (heading,options) {
     }
     var generateNumberButtons = function () {
         var options = { };
+        console.log(calculatorModel.numberButtons);
         for ( button in calculatorModel.numberButtons ) {
-//            console.log(calculatorModel.numberButtons[button]);
             var but1 = new NumberButtonControl(calculatorModel.numberButtons[button], calculatorModel.numberButtons[button], options);
-            console.log(but1.getNumberButtonElement());
-            calculatorModel.domNumberButtons.push ( but1.getNumberButtonElement() );
+            calculatorModel.domButtons[calculatorModel.numberButtons[button]] =  but1.getNumberButtonElement() ;
         }
     }
 
     var generateOperatorButtons = function () {
         var options = { };
-        console.log("apoorv");
         for ( button in calculatorModel.operatorButtons ) {
            var but1 = new OperatorButtonControl(calculatorModel.operatorButtons[button], calculatorModel.operatorButtons[button], options);
-           console.log(but1.getOperatorButtonView());
-           calculatorModel.domNumberButtons.push ( but1.getOperatorButtonElement() );
+           calculatorModel.domButtons[calculatorModel.operatorButtons[button]] = but1.getOperatorButtonView();
         }
     }
 
     var generateGeneralButtons = function () {
-
+        var options = { }, gbc;
+        for (var i =0; i< calculatorModel.generalButtons.length;i++ ) {
+            gbc = new ButtonController(calculatorModel.generalButtons[i], calculatorModel.generalButtons[i], options);
+            gbc.onClickHandler = function(event, id, value) {
+                alert(id, value);
+            }
+            calculatorModel.domButtons[calculatorModel.generalButtons[i]] = gbc.getButtonElement() ;
+        }
     }
 
     var generateScreen = function () {
         var sc = new DisplayControl();
         calculatorModel.screen.push(sc.getDisplayElement());
     }
+
     this.getCalculatorElement=function() {
         return calculatorView;
     }

@@ -19,7 +19,7 @@
 
              this.getOperatorButtonElement = function ()
         {
-              console.log(operatorButtonElement);
+//              console.log(operatorButtonElement);
               return operatorButtonElement;
         }
       init();

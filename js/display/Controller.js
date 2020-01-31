@@ -1,5 +1,5 @@
 // interface for display class - returns display dom element
-function DisplayControl() {
+var DisplayControl = function() {
     var displayModel;
     var displayView;
 

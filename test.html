@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var Person = function(name) {
+     this.name = name;
+     var scope = this;
+     this.doSomething = function () {
+        return scope.name;
+     }
+    }
+   var p = new Person('abc');
+
+   console.log(p.doSomething());
+    p.name = "def";
+    p.doSomething = function () {
+        alert('came here');
+     }
+    console.log(p.doSomething());
+
+</script>
+</body>
+</html>
