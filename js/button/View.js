@@ -5,11 +5,15 @@ var ButtonView = function (model) {
         createButtonElement();
     }
     createButtonElement = function() {
-        buttonViewElement = document.createElement("button");
+        buttonViewElement = document.createElement("div");
         buttonViewElement.className = model.options.buttonClass;
         buttonViewElement.id = model.id;
         buttonViewElement.innerHTML = model.value;
     }
+    this.getButtonElement = function () {
+            return buttonViewElement;
+        }
     init();
-    return buttonViewElement;
-}
+
+    return this;
+};

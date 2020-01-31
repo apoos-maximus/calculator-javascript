@@ -1,10 +1,11 @@
 // display class
 var DisplayModel = function () {
-    this.expression = "lol . . !" ;
+    this.expression = "" ;
+    this.state = "ON";
     this.options = {
-        containerClass : "w3-display-container w3-padding-large w3-dark-grey w3-hover",
-        subContainerClass : "w3-display-middle w3-center",
-        width: "300px",
-        height: "50px"
+        containerClass : " w3-padding-large w3-dark-grey  w3-stretch",
+        subContainerClass : " w3-padding-large w3-center w3-stretch",
+        width: "",
+        height: ""
     }
 };

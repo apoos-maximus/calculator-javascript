@@ -1,21 +1,21 @@
 // interface for button class : returns dom button
 var ButtonController = function (id, value, options){
-    var btnView, btnModel, scope = this;
+    var btnView, btnModel, domBut, scope = this;
     var init = function() {
         btnModel = new ButtonModel(id, value, options);
         btnView = new ButtonView(btnModel);
-
-        btnView.onclick = function(evt) {
-            scope.onClickHandler(evt, id, value);
-        }
     }
 
-    this.onClickHandler = function(event, id, value) {
-        console.log(id + " is pressed");
+    this.onclickHandler = function () {
+        console.log(btnModel.value);
     }
-
     this.getButtonElement = function() {
-        return btnView;
+
+        domBut = btnView.getButtonElement();
+        domBut.onclick = function () {
+            scope.onclickHandler(btnModel.id,btnModel.value);
+        }
+        return domBut;
     }
     init();
     return this;
