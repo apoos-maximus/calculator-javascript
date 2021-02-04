@@ -90,4 +90,4 @@ function CalculatorController (heading,options) {
 
     init();
     return this;
-};
+}
